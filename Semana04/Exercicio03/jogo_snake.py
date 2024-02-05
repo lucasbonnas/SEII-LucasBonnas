@@ -1,4 +1,4 @@
-#Fazendo jogo Snake
+
 import pygame, random
 from pygame.locals import *
 
