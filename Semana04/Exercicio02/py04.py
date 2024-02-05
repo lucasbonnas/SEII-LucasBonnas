@@ -1,5 +1,3 @@
-#poo4
-
 class Dog:
     
     def bark(self):
