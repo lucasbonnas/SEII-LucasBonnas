@@ -1,5 +1,3 @@
-#poo13
-
 class Math:
     
     @staticmethod
