@@ -1,5 +1,3 @@
-#poo9
-
 class Student:
     def __init__(self, name, age, grade):
         self.name = name

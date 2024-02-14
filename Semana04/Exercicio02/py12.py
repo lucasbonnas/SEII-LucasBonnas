@@ -1,5 +1,3 @@
-#poo12
-
 class Person:
     number_of_people = 0
     GRAVITY = -9.8
