@@ -1,0 +1,12 @@
+1) Qual o limite de bytes a serem enviados por pacotes TCP e UDP?
+
+O limite de bytes a serem enviados por pacotes TCP é definido pelo Maximum Segment Size (MSS), que é determinado pela menor MTU (Maximum Transmission Unit) da rede. Normalmente, o MSS varia de 536 a 1460 bytes. No caso do UDP, o limite de bytes por pacote é o tamanho máximo permitido pelo protocolo de camada de rede subjacente (geralmente IPv4 ou IPv6). Para IPv4, o tamanho máximo de um pacote UDP é de 65535 bytes (64 KB), mas deve ser considerado que, em redes comuns, o tamanho máximo de um pacote UDP é limitado pelo MTU da rede, assim como no TCP.
+
+2) Como um arquivo grande pode ser transmitido via internet?
+
+Um arquivo grande pode ser transmitido via internet dividindo-o em partes menores (chunks) e enviando essas partes de forma sequencial. Isso pode ser feito usando protocolos de transferência de arquivos como FTP (File Transfer Protocol), HTTP (Hypertext Transfer Protocol) ou mesmo implementando um protocolo customizado.
+
+3) Qual a diferença entre as implementações TCP e UDP para esse problema?
+
+TCP (Transmission Control Protocol) garante a entrega ordenada, confiável e sem erros dos dados. Ele divide o arquivo em segmentos menores e retransmite automaticamente os segmentos perdidos ou corrompidos. TCP também gerencia o controle de fluxo e a congestão de rede.
+UDP (User Datagram Protocol), por outro lado, é um protocolo de transporte sem conexão e não orientado a conexão. Ele não garante a entrega dos dados nem a ordem de entrega. No entanto, é mais leve em termos de overhead de cabeçalho e é mais rápido, pois não possui o overhead de controle de congestionamento e retransmissão de pacotes que o TCP tem. Portanto, para transmitir um arquivo grande via UDP, é necessário implementar mecanismos adicionais de controle de erros e de ordem de entrega, já que o UDP não oferece essas garantias por padrão.
